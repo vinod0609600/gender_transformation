@@ -10,10 +10,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-white font-serif text-xl font-bold">G</span>
-              </div>
-              <span className="text-lg font-serif font-bold text-primary">GenderCare Institute</span>
+              <img src="/assets/logo.png" alt="GenderCare Institute" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Providing compassionate, evidence-based gender-affirming care in a supportive and safe environment. Committed to WPATH standards of care.

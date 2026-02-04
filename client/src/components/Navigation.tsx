@@ -37,13 +37,7 @@ export function Navigation() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-white font-serif text-2xl font-bold">G</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-serif font-bold leading-none text-primary">GenderCare</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">Institute</span>
-            </div>
+            <img src="/assets/logo.png" alt="GenderCare Institute" className="h-12 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
