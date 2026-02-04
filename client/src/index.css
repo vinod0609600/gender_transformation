@@ -5,32 +5,32 @@
 @tailwind utilities;
 
 :root {
-  /* Medical/Calm Theme - Sage & Soft Blue */
+  /* Logo-inspired Theme - Navy Blue and Vibrant Purple/Pink */
   --background: 210 20% 98%;
-  --foreground: 215 25% 27%;
+  --foreground: 228 58% 15%;
   
-  /* Primary: Trustworthy Sage Green */
-  --primary: 153 27% 35%;
+  /* Primary: Navy Blue from Logo */
+  --primary: 228 58% 25%;
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Soft Medical Blue */
-  --secondary: 203 39% 88%;
-  --secondary-foreground: 215 25% 27%;
+  /* Secondary: Soft Purple/Blue gradient start */
+  --secondary: 250 40% 95%;
+  --secondary-foreground: 228 58% 15%;
   
-  /* Accent: Warm Neutral/Sand for warmth */
-  --accent: 35 30% 92%;
-  --accent-foreground: 215 25% 27%;
+  /* Accent: Vibrant Purple from Logo icon */
+  --accent: 280 60% 92%;
+  --accent-foreground: 228 58% 25%;
   
   /* Muted elements */
   --muted: 210 20% 96%;
-  --muted-foreground: 215 16% 47%;
+  --muted-foreground: 228 20% 45%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
   
-  --border: 214 20% 90%;
-  --input: 214 20% 90%;
-  --ring: 153 27% 35%;
+  --border: 228 20% 90%;
+  --input: 228 20% 90%;
+  --ring: 228 58% 25%;
   
   --radius: 0.75rem;
 
