@@ -36,6 +36,7 @@ export function Footer() {
               <li><Link href="/services/genital" className="text-sm text-muted-foreground hover:text-primary transition-colors">Genital Surgery</Link></li>
               <li><Link href="/services/facial" className="text-sm text-muted-foreground hover:text-primary transition-colors">Facial Reconstruction</Link></li>
               <li><Link href="/services/voice" className="text-sm text-muted-foreground hover:text-primary transition-colors">Voice Therapy</Link></li>
+              <li><Link href="/services/body-contouring" className="text-sm text-muted-foreground hover:text-primary transition-colors">Body Contouring</Link></li>
             </ul>
           </div>
 

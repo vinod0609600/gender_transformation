@@ -92,6 +92,43 @@ const servicesData = {
         <p className="text-muted-foreground">Our counselors provide WPATH-compliant readiness assessments, pre-surgical support, and ongoing therapy to ensure mental well-being throughout your transition.</p>
       </div>
     )
+  },
+  "body-contouring": {
+    title: "Body Contouring",
+    desc: "Comprehensive body sculpting procedures to enhance body proportions and achieve your desired silhouette.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=2000",
+    content: (
+      <div className="space-y-8">
+        <div>
+          <h3 className="text-2xl font-serif font-bold text-primary mb-4">Body Contouring Overview</h3>
+          <p className="text-muted-foreground mb-4">Body contouring procedures are designed to enhance your natural body proportions and create harmonious body lines that align with your gender identity. These procedures complement other surgical interventions and help achieve your ideal aesthetic goals.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="p-6 bg-white rounded-xl shadow-sm border">
+            <h4 className="text-lg font-bold text-primary mb-3">Liposuction & Sculpting</h4>
+            <p className="text-sm text-muted-foreground">Strategic fat removal and body sculpting to refine waist definition, contour hips, and enhance overall body shape. Using advanced tumescent and ultrasound-assisted techniques for optimal results.</p>
+          </div>
+          <div className="p-6 bg-white rounded-xl shadow-sm border">
+            <h4 className="text-lg font-bold text-primary mb-3">Hip & Buttock Enhancement</h4>
+            <p className="text-sm text-muted-foreground">Brazilian buttock lift and hip enhancement through fat grafting or implants to create feminine curves or masculine definition based on your goals.</p>
+          </div>
+          <div className="p-6 bg-white rounded-xl shadow-sm border">
+            <h4 className="text-lg font-bold text-primary mb-3">Abdominoplasty</h4>
+            <p className="text-sm text-muted-foreground">Tummy tuck procedures to remove excess skin and tighten abdominal muscles, creating a smooth, contoured midsection.</p>
+          </div>
+          <div className="p-6 bg-white rounded-xl shadow-sm border">
+            <h4 className="text-lg font-bold text-primary mb-3">Thigh & Arm Contouring</h4>
+            <p className="text-sm text-muted-foreground">Skin tightening and fat removal from thighs and arms to create sleek, toned lines that complement your overall body transformation.</p>
+          </div>
+        </div>
+        <div className="bg-amber-50 p-6 rounded-xl border border-amber-100">
+          <h4 className="flex items-center gap-2 font-bold text-amber-900 mb-2">
+            <Info className="h-5 w-5" /> Recovery & Results
+          </h4>
+          <p className="text-amber-800/80 text-sm">Most patients can resume light activities within 1-2 weeks and see final results within 3-6 months as swelling subsides. Compression garments support optimal healing and contouring.</p>
+        </div>
+      </div>
+    )
   }
 };
 

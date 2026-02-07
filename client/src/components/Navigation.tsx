@@ -16,6 +16,7 @@ export function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
+    { href: "/doctors", label: "Our Team" },
     { href: "/journey", label: "Patient Journey" },
     { href: "/evidence", label: "Medical Evidence" },
     { href: "/international", label: "International" },
@@ -26,6 +27,7 @@ export function Navigation() {
     { href: "/services/genital", label: "Genital Surgery" },
     { href: "/services/facial", label: "Facial & Reconstructive" },
     { href: "/services/voice", label: "Voice & Communication" },
+    { href: "/services/body-contouring", label: "Body Contouring" },
     { href: "/services/non-surgical", label: "Non-Surgical Care" },
   ];
 

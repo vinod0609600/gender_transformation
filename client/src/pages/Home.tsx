@@ -11,7 +11,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           {/* Unsplash: Calm medical consultation scene, abstract blur */}
           <img 
-            src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=2000"
+            src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=400"
             alt="Comfortable care environment" 
             className="w-full h-full object-cover opacity-30 mix-blend-overlay"
           />
@@ -91,8 +91,8 @@ export default function Home() {
               { title: "Genital Surgery", desc: "Advanced surgical options focused on function and sensation.", link: "/services/genital", color: "bg-green-50" },
               { title: "Facial Reconstruction", desc: "Facial feminization and masculinization surgeries.", link: "/services/facial", color: "bg-amber-50" },
               { title: "Voice Therapy", desc: "Speech pathology and surgical interventions for authentic voice.", link: "/services/voice", color: "bg-purple-50" },
+              { title: "Body Contouring", desc: "Body sculpting and proportioning procedures for your desired silhouette.", link: "/services/body-contouring", color: "bg-rose-50" },
               { title: "Non-Surgical Care", desc: "Hormone therapy, counseling, and ongoing support.", link: "/services/non-surgical", color: "bg-pink-50" },
-              { title: "Patient Journey", desc: "Understanding the step-by-step process of care.", link: "/journey", color: "bg-slate-100" },
             ].map((service, i) => (
               <Link key={i} href={service.link}>
                 <div className={`group p-8 rounded-2xl h-full border border-transparent hover:border-primary/20 hover:shadow-lg transition-all duration-300 cursor-pointer ${service.color}`}>
@@ -104,6 +104,46 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section Preview */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Meet Our Medical Team</h2>
+            <p className="text-lg text-muted-foreground">Our experienced, compassionate specialists are dedicated to providing you with the highest standard of gender-affirming care.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "Gender-Affirming Surgeon", specialty: "Surgical Procedures", color: "bg-blue-50" },
+              { name: "Facial Specialist", specialty: "Facial Reconstruction", color: "bg-amber-50" },
+              { name: "Endocrinologist", specialty: "Hormone Management", color: "bg-green-50" },
+              { name: "Mental Health Professional", specialty: "Counseling & Support", color: "bg-purple-50" }
+            ].map((member, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`p-6 rounded-2xl text-center border border-transparent hover:border-primary/20 hover:shadow-lg transition-all duration-300 ${member.color}`}
+              >
+                <div className="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4" />
+                <h3 className="font-serif font-bold text-lg mb-1 text-primary">{member.name}</h3>
+                <p className="text-sm text-muted-foreground mb-4">{member.specialty}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/doctors">
+              <Button size="lg" className="h-12 px-8 rounded-full bg-primary hover:bg-primary/90">
+                View Full Team <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

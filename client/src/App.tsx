@@ -16,6 +16,7 @@ import Journey from "@/pages/Journey";
 import Evidence from "@/pages/Evidence";
 import International from "@/pages/International";
 import Contact from "@/pages/Contact";
+import Doctors from "@/pages/Doctors";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 
@@ -37,6 +38,7 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/doctors" component={Doctors} />
           <Route path="/services/:type" component={Services} />
           <Route path="/journey" component={Journey} />
           <Route path="/evidence" component={Evidence} />
