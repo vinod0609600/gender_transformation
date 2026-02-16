@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
@@ -93,10 +94,10 @@ app.use((req, res, next) => {
   httpServer.listen(
     {
       port,
-      host: "localhost",
+      host: "0.0.0.0",
     },
     () => {
-      log(`🚀 Server running at http://localhost:${port}`);
+      log(`🚀 Server running at http://0.0.0.0:${port}`);
     },
   );
 })();

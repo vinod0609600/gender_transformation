@@ -39,7 +39,7 @@ const servicesData = {
       <div className="space-y-8">
         <p className="text-lg text-muted-foreground">Our surgical team specializes in advanced genital reconstruction, offering state-of-the-art procedures with a focus on urinary function, sensation, and aesthetics.</p>
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="p-6 bg-white rounded-xl shadow-sm border">
+          <div className="p-6 bg-white/50 backdrop-blur-sm rounded-xl shadow-sm border">
             <h3 className="text-xl font-bold text-primary mb-3">Vaginoplasty</h3>
             <p className="text-sm text-muted-foreground">Creation of a vaginal cavity and vulva using penile inversion or peritoneal pull-through techniques. Priorities include depth, sensation, and natural appearance.</p>
           </div>
@@ -74,7 +74,7 @@ const servicesData = {
     content: (
       <div className="space-y-6">
         <p className="text-muted-foreground">Communication is more than just pitch. Our speech-language pathologists work on resonance, intonation, and non-verbal cues.</p>
-        <div className="p-6 bg-slate-50 rounded-xl">
+        <div className="p-6 bg-secondary/20 rounded-xl">
           <h3 className="font-bold text-primary mb-2">Surgical Options</h3>
           <p className="text-muted-foreground text-sm">For those where therapy alone isn't enough, we offer glottoplasty and other vocal cord surgeries to permanently elevate pitch.</p>
         </div>
@@ -143,12 +143,12 @@ export default function Services() {
 
   return (
     <div className="min-h-screen pb-20">
-      <PageHeader 
-        title={service.title} 
+      <PageHeader
+        title={service.title}
         description={service.desc}
         backgroundImage={service.image}
       />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Content */}

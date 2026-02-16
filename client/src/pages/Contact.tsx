@@ -11,12 +11,13 @@ import { Loader2, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   const { mutate, isPending } = useCreateInquiry();
-  
+
   const form = useForm<InsertInquiry>({
     resolver: zodResolver(insertInquirySchema),
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       subject: "",
       message: ""
     }
@@ -30,19 +31,19 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen">
-      <PageHeader 
-        title="Contact Us" 
+      <PageHeader
+        title="Contact Us"
         description="We're here to answer your questions. Reach out securely below."
         // Unsplash: Abstract communication or desk
         backgroundImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2000"
       />
 
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            
+
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border">
+            <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-sm border">
               <h2 className="text-2xl font-serif font-bold text-primary mb-6">Send us a message</h2>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -74,6 +75,19 @@ export default function Contact() {
                   />
                   <FormField
                     control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Phone Number (Optional)</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your phone number" {...field} className="bg-slate-50" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
@@ -92,10 +106,10 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="How can we help you? Please do not include sensitive medical details here." 
-                            className="min-h-[150px] bg-slate-50" 
-                            {...field} 
+                          <Textarea
+                            placeholder="How can we help you? Please do not include sensitive medical details here."
+                            className="min-h-[150px] bg-slate-50"
+                            {...field}
                           />
                         </FormControl>
                         <FormMessage />
@@ -142,7 +156,7 @@ export default function Contact() {
               <div className="bg-slate-200 w-full h-64 rounded-2xl flex items-center justify-center text-slate-400">
                 <span className="font-semibold">Interactive Map Placeholder</span>
               </div>
-              
+
               <div className="p-4 bg-amber-50 border border-amber-100 rounded-xl">
                 <p className="text-sm text-amber-900">
                   <strong>Emergency?</strong> If you are experiencing a medical emergency, please call 911 or go to your nearest emergency room immediately. Do not use this form for urgent medical needs.

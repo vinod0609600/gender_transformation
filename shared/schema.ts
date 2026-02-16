@@ -6,6 +6,7 @@ export const inquiries = pgTable("inquiries", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
+  phone: text("phone"),
   subject: text("subject").notNull(),
   message: text("message").notNull(),
   isRead: boolean("is_read").default(false),
@@ -15,10 +16,12 @@ export const inquiries = pgTable("inquiries", {
 export const insertInquirySchema = createInsertSchema(inquiries).pick({
   name: true,
   email: true,
+  phone: true,
   subject: true,
   message: true,
 }).extend({
   email: z.string().email(),
+  phone: z.string().min(10, "Phone number must be at least 10 digits").optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 

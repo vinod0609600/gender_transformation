@@ -6,14 +6,14 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, backgroundImage }: PageHeaderProps) {
   return (
-    <div className="relative bg-primary/5 py-20 lg:py-28 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-secondary/30 to-background py-20 lg:py-28 overflow-hidden">
       {backgroundImage && (
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-white/90 backdrop-blur-sm z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-secondary/80 to-background/90 backdrop-blur-sm z-10" />
           {/* Unsplash image passed via props */}
-          <img 
-            src={backgroundImage} 
-            alt="Background" 
+          <img
+            src={backgroundImage}
+            alt="Background"
             className="w-full h-full object-cover opacity-20"
           />
         </div>

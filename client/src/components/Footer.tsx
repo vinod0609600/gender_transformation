@@ -3,14 +3,14 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50 border-t mt-auto">
+    <footer className="bg-gradient-to-br from-secondary/50 via-background to-secondary/30 border-t mt-auto">
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
+
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/assets/logo.png" alt="GenderCare Institute" className="h-10 w-auto object-contain" />
+              <img src="/assets/logo-v4.png" alt="GenderCare Institute" className="h-20 w-auto object-contain" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Providing compassionate, evidence-based gender-affirming care in a supportive and safe environment. Committed to WPATH standards of care.
@@ -23,7 +23,6 @@ export function Footer() {
             <ul className="space-y-3">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/journey" className="text-sm text-muted-foreground hover:text-primary transition-colors">Patient Journey</Link></li>
-              <li><Link href="/evidence" className="text-sm text-muted-foreground hover:text-primary transition-colors">Medical Research</Link></li>
               <li><Link href="/international" className="text-sm text-muted-foreground hover:text-primary transition-colors">International Patients</Link></li>
             </ul>
           </div>

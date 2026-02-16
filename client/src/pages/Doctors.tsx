@@ -68,7 +68,7 @@ export default function Doctors() {
       />
 
       {/* Team Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-b from-background to-secondary/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Intro Text */}
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -104,7 +104,7 @@ export default function Doctors() {
                 </div>
 
                 {/* Doctor Info */}
-                <div className="p-8 bg-white">
+                <div className="p-8 bg-white/70 backdrop-blur-sm">
                   <h3 className="text-2xl font-serif font-bold text-primary mb-2">
                     {doctor.name}
                   </h3>
@@ -199,7 +199,7 @@ export default function Doctors() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 bg-white rounded-xl border border-secondary/20 text-center"
+                className="p-8 bg-white/70 backdrop-blur-sm rounded-xl border border-secondary/20 text-center"
               >
                 <h3 className="font-bold text-primary mb-3 text-lg">{value.title}</h3>
                 <p className="text-muted-foreground">{value.desc}</p>

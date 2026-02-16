@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Chatbot } from "@/components/Chatbot";
 import { ScrollToTop } from "@/components/ScrollToTop"; // Helper we'll make inline if needed, or just let pages handle it
 import NotFound from "@/pages/not-found";
 
@@ -13,10 +14,12 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Journey from "@/pages/Journey";
-import Evidence from "@/pages/Evidence";
 import International from "@/pages/International";
 import Contact from "@/pages/Contact";
 import Doctors from "@/pages/Doctors";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
+import Admin from "@/pages/Admin";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 
@@ -41,13 +44,16 @@ function Router() {
           <Route path="/doctors" component={Doctors} />
           <Route path="/services/:type" component={Services} />
           <Route path="/journey" component={Journey} />
-          <Route path="/evidence" component={Evidence} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/blog/:id" component={BlogPost} />
           <Route path="/international" component={International} />
           <Route path="/contact" component={Contact} />
+          <Route path="/admin" component={Admin} />
           <Route component={NotFound} />
         </Switch>
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }

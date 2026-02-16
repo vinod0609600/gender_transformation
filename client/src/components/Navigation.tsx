@@ -18,7 +18,7 @@ export function Navigation() {
     { href: "/about", label: "About Us" },
     { href: "/doctors", label: "Our Team" },
     { href: "/journey", label: "Patient Journey" },
-    { href: "/evidence", label: "Medical Evidence" },
+    { href: "/blog", label: "Blog" },
     { href: "/international", label: "International" },
   ];
 
@@ -34,23 +34,22 @@ export function Navigation() {
   const isActive = (path: string) => location === path;
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <nav className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-background/90 to-secondary/90 backdrop-blur supports-[backdrop-filter]:bg-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <img src="/assets/logo.png" alt="GenderCare Institute" className="h-12 w-auto object-contain" />
+            <img src="/assets/logo-v4.png" alt="GenderCare Institute" className="h-20 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <Link 
-                key={link.href} 
+              <Link
+                key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(link.href) ? "text-primary font-semibold" : "text-muted-foreground"
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-primary ${isActive(link.href) ? "text-primary font-semibold" : "text-muted-foreground"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -93,23 +92,22 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-t bg-white">
+        <div className="lg:hidden border-t bg-gradient-to-b from-background/95 to-secondary/95 backdrop-blur-sm">
           <div className="space-y-1 px-4 py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block rounded-md px-3 py-2 text-base font-medium ${
-                  isActive(link.href)
-                    ? "bg-secondary/50 text-primary"
-                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                }`}
+                className={`block rounded-md px-3 py-2 text-base font-medium ${isActive(link.href)
+                  ? "bg-secondary/50 text-primary"
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                  }`}
               >
                 {link.label}
               </Link>
             ))}
-            
+
             <div className="pt-2 pb-2">
               <p className="px-3 text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Services</p>
               {services.map((service) => (
